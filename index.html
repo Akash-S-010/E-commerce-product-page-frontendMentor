@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | E-commerce product page</title>
 </head>
@@ -29,7 +32,10 @@
         </ul>
       </div>
       <div class="nav-icons">
-        <img src="images/icon-cart.svg" alt="Cart" id="cart-icon">
+        <div class="cart-icon-container">
+          <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
+          <p class="cart-icon-num">10</p>
+        </div>
         <img src="images/image-avatar.png" alt="User" class="avatar">
       </div>
     </nav>
@@ -51,25 +57,36 @@
     <section class="product-details">
       <p class="company-para">SNEAKER COMPANY</p>
       <h1>Fall Limited Edition Sneakers</h1>
-      <p class="para">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole,
+      <p class="para">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber
+        outer sole,
         they'll withstand everything the weather can offer.</p>
       <div class="price-section">
         <span class="discounted-price">$125.00</span>
-        <span class="discount-badge">50%</span><br><br>
+        <span class="discount-badge">50%</span><br>
         <span class="original-price">$250.00</span>
       </div>
       <div class="quantity-container">
-        <button id="decrement">-</button>
+        <button id="decrement" class="operator-btn">-</button>
         <span id="quantity">0</span>
-        <button id="increment">+</button>
+        <button id="increment" class="operator-btn">+</button>
+        <button id="add-to-cart" class="add-to-cart-button">
+          <i class="fa-solid fa-cart-shopping btn-cart"></i>
+          Add to Cart</button>
       </div>
-      <button id="add-to-cart" class="add-to-cart-button">Add to Cart</button>
+
     </section>
   </main>
 
   <div class="cart-dropdown" id="cart-dropdown">
     <h2>Cart</h2>
-    <div id="cart-items"></div>
+    <div id="cart-items">
+      <img src="images/image-product-1-thumbnail.jpg" alt="">
+      <div class="dropdown-para-container">
+        <p class="dropdown-para">Fall Limited Edition Sneakers</p>
+        <p>$125.00 x 10 <span>$ 1250</span></p>
+      </div>
+      <i class="fa-solid fa-trash delete-btn"></i>
+    </div>
     <button id="checkout">Checkout</button>
   </div>
 
