@@ -139,6 +139,7 @@ body {
     border-radius: 10px;
     cursor: pointer;
 }
+
 .active-thumbnail {
     border: 2px solid red;
     filter: opacity(40%);
@@ -217,6 +218,11 @@ body {
 .btn-cart {
     margin-right: 10px;
     color: var(--very-dark-blue);
+
+}
+
+.operators {
+    display: flex;
 }
 
 .operator-btn {
@@ -339,7 +345,8 @@ body {
     border-radius: 50%;
     padding: 5px 10px;
 }
-.prev-button{
+
+.prev-button {
     position: absolute;
     top: 46%;
     left: 32.5%;
@@ -347,7 +354,8 @@ body {
     padding: 10px 15px;
     border-radius: 50%;
 }
-.next-button{
+
+.next-button {
     position: absolute;
     top: 46%;
     right: 30%;
@@ -361,4 +369,96 @@ body {
     left: 38%;
     bottom: 2%;
     font-size: 10px;
+}
+
+@media (width<376px) {
+    .nav-icons .avatar {
+        width: 30px;
+        margin-left: 8px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    .product-gallery {
+        margin-top: 0;
+        position: relative;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .large-image img {
+        width: 100%;
+        cursor: pointer;
+        border-radius: 0px;
+    }
+
+    .product-details {
+        margin-left: 0;
+        width: 320px;
+    }
+
+    .company-para {
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+
+    .product-details h1 {
+        font-size: 30px;
+        margin-bottom: 6%;
+    }
+
+    .quantity-container {
+        display: flex;
+        flex-direction:column;
+        margin: 20px 0 50px;
+    }
+
+    .btn-cart {
+        margin-right: 10px;
+    }
+
+    .add-to-cart-button {
+        margin-top: 18px;
+        width: 100%;
+        font-size: 15px;
+        font-weight: 700;
+        padding: 15px 0px;
+        margin-left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .operators {
+        width: 100%;
+        justify-content: space-between;
+    }
+    #quantity {
+        width: 100%;    
+    }
+    .operator-btn {
+        background-color: hsl(220, 8%, 93%);
+    }
+    .cart-dropdown {
+        width: 95%;
+        top: 90px;
+        right: 9px;
+    }
+
+    .thumbnail-container {
+        display: none;
+    }
+
+    .attribution {
+        display: none;
+    }
+
+
 }
