@@ -363,6 +363,9 @@ body {
     padding: 10px 15px;
     border-radius: 50%;
 }
+.mobile-carousel{
+    display: none;
+}
 
 .attribution {
     position: absolute;
@@ -453,7 +456,16 @@ body {
     }
 
     .thumbnail-container {
-        display: none;
+        display: flex;
+        margin-left: 8%;
+        width: 100px;
+        margin-bottom: 20px;
+    }
+    .mobile-carousel{
+        display: block;
+        position: absolute;
+        top: 45%;
+        padding: 0 60px;
     }
 
     .attribution {
